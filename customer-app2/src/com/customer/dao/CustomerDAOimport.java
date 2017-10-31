@@ -52,7 +52,7 @@ public class CustomerDAOimport implements CustomerDAO {
 		
 		Session currentSession = sessionFactory.getCurrentSession();
 
-		Query theQuery = currentSession.createQuery("delete from Customer where id=:customerId", Customer.class);
+		Query theQuery = currentSession.createQuery("delete from Customer where id=:customerId");
 		
 		theQuery.setParameter("customerId", theId);
 		
